@@ -62,15 +62,15 @@ public class Application {
 
         for (int i = 0; i < citanja.size(); i++) {
 
-            if (naziviTacaka.get(i).startsWith("r")) {
+            if (naziviTacaka.get(i).startsWith("r") && citanja.get(i) > 0) {
                 visinaVizure2 = kote.get(j) + citanja.get(i);
                 System.out.println("Visina vizure za reper " + naziviTacaka.get(i) + " je " + visinaVizure2);
                 j++;
-            } else if (visinaVizure2 > 0) {
+            } else if (visinaVizure2 > 0 && citanja.get(i) > 0) {
                 double kotaVezneTacke2 = visinaVizure2 - citanja.get(i);
                 System.out.println("Kota vezne tacke br. " + naziviTacaka.get(i) + " je " + kotaVezneTacke2);
             } else {
-                System.out.println("Pogresan unos. Prvo je potrebno uneti podatke za reper.");
+                System.out.println("Pogresan unos. Prvo je potrebno uneti podatke za reper. Takodje vrednosti citanja na letvi ne smeju biti manja od 0!");
             }
 
         }
