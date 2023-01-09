@@ -9,7 +9,7 @@ public class Application {
         ArrayList<Double> citanja = new ArrayList<>();
         ArrayList<Double> kote = new ArrayList<>();
 
-        System.out.println("Da li unosis podatke za reper ili veznu tacku?");
+        System.out.println("Unesi podatke za reper ili veznu tacku");
         System.out.println("r/v?");
 
         String prviUnos = s.next();
@@ -74,18 +74,5 @@ public class Application {
             }
 
         }
-
-
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++");
-
-        double kotaVezneTacke = kotaReper + citanjeReper - citanjeVezna;
-        double visinaVizure = kotaReper + citanjeReper;
-        if (citanjeReper > 0) {
-            System.out.println("Visina vizure je: " + visinaVizure);
-        }
-        if (citanjeVezna > 0 && citanjeReper > 0) {
-            System.out.println("Kota vezne tacke je: " + kotaVezneTacke);
-        }
-
     }
 }
